@@ -10,12 +10,7 @@ export default function App() {
   const [num, setNum] = useState("0");
   const [values, setValues] = useState([]);
   const handleClick = (value) => {
-    if (
-      values[values.length - 1] === "/" ||
-      values[values.length - 1] === "*" ||
-      values[values.length - 1] === "-" ||
-      values[values.length - 1] === "+"
-    ) {
+    if (values.length > 1 && values.includes(num)) {
       setNum(value);
     } else {
       if (num === "0") {
